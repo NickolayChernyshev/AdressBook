@@ -48,13 +48,15 @@ public class AddrBookManager {
                     break;
                 case 4: {
                     System.out.println("Введите индекс для удаления записи");
-                    int index = sc.nextInt();
+                    String a = sc.nextLine();
+                    int index = Integer.parseInt (a);
                     if (index < AddressBook.getCount(addressBook)) {
                         AddressBook.delete(addressBook, index);
                         System.out.println("Запись была успешно удалена");
                     } else {
                         System.out.println("Неправильный индекс");
                     }
+                    break;
                 }
                 case 5:
                     System.out.println("Введите индекс для изменения записи");
