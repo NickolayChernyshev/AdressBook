@@ -12,8 +12,8 @@ public class AddressBook {
     public static int[] find(AddressBook book, String name) {
         int count = 0;
         for (int i = 0; i < book.count; i++) {
-            if (!(book.list[i].name == null)) {
-                Address a = book.list[i];
+            Address a = book.list[i];
+            if (a.name != null) {
                 if (a.name.equals(name)) {
                     count++;
                 }
@@ -39,8 +39,7 @@ public class AddressBook {
             System.out.println(i + "." + address.name + " / " + address.phone + " / " + address.email);
         }
     }
-    public static void vvod (AddressBook book) {
-        int i=0;
+    public static void vvod (AddressBook book, int i) {
         Address address = book.list[i];
         System.out.println(i + "." + address.name + " / " + address.phone + " / " + address.email);
 

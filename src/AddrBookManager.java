@@ -38,7 +38,7 @@ public class AddrBookManager {
                         System.out.println("Результаты не найдены");
                     } else {
                         for (int i = 0; i < poisk.length; i++) {
-                            AddressBook.vvod (addressBook);
+                            AddressBook.vvod (addressBook, poisk[i]);
                         }
                     }
                     break;
